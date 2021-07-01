@@ -44,9 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: AnimatedContainer(
-        color: Colors.red,
         width: _counter ? 100 : 200,
         height: _counter ? 100 : 200,
+        decoration: BoxDecoration(
+        color: _counter ?  Colors.red : Colors.blue,
+          borderRadius: BorderRadius.circular(_counter ? 100 : 4)
+        ),
+
         duration: Duration(
           milliseconds: 500,
         ),
